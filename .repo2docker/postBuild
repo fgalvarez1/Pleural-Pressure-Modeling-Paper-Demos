@@ -25,5 +25,4 @@ conda env create -f .repo2docker/environment_dolfin_mech.yml
 ${CONDA_DIR}/envs/dolfin_mech/bin/python -m ipykernel install --prefix=${CONDA_DIR} --name dolfin_mech --display-name "dolfin_mech"
 
 conda clean --all -f -y
-pip cache purge
-rm -rf ~/.cache/pip
+pip cache purge || true
