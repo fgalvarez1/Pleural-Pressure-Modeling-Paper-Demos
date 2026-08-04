@@ -1,0 +1,26 @@
+name: dolfin_mech
+
+channels:
+  - conda-forge
+
+dependencies:
+  # python
+  - python=3.10.15
+  - ipykernel
+  - numpy=1.24.0
+  - matplotlib=3.9.2
+  - scipy=1.14.1
+  - pandas==2.2.3
+
+  # computing stuff
+  - fenics=2019.1.0
+  - meshio=5.3.5
+
+  # pip for additional packages
+  - pip=24.2
+  - pip:
+    - dolfin_mech==2024.7.24
+    - tensorly==0.9.0
+    - --extra-index-url https://download.pytorch.org/whl/cpu
+    - torch==2.12.0
+    - torchvision==0.27.0

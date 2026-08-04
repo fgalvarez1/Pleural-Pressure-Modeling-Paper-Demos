@@ -14,3 +14,14 @@ echo "alias la=\"ls -lah\"" >> ~/.bash_aliases
 rm ~/apt.txt
 rm ~/environment.yml
 rm ~/postBuild
+
+# Add new environments
+python -m ipykernel install --prefix=${CONDA_DIR} --name notebook --display-name "Python (Default)"
+
+conda env create -f .repo2docker/environment_pot.yml
+${CONDA_DIR}/envs/pot/bin/python -m ipykernel install --prefix=${CONDA_DIR} --name pot --display-name "POT"
+
+conda env create -f .repo2docker/environment_dolfin_mech.yml
+${CONDA_DIR}/envs/dolfin_mech/bin/python -m ipykernel install --prefix=${CONDA_DIR} --name dolfin_mech --display-name "dolfin_mech"
+
+conda clean --all -f -y
