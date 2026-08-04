@@ -4,10 +4,11 @@
 .gitignore
 
 # demos
-demos/
+demos/__pycache__
+demos/Results_*/
+demos/TransportPlansPOT
 
 # Python & Jupyter caches
-__pycache__/
 *.pyc
 .ipynb_checkpoints/
 
