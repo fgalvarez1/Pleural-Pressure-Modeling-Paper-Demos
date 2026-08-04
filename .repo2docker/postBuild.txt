@@ -1,0 +1,16 @@
+################################################################################
+###                                                                          ###
+### Created by Martin Genet                                                  ###
+###                                                                          ###
+### École Polytechnique, Palaiseau, France                                   ###
+###                                                                          ###
+################################################################################
+
+cd
+
+echo "alias ll=\"ls -lh\"" >> ~/.bash_aliases
+echo "alias la=\"ls -lah\"" >> ~/.bash_aliases
+
+rm ~/apt.txt
+rm ~/environment.yml
+rm ~/postBuild
