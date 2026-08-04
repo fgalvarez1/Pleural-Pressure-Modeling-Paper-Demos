@@ -22,14 +22,11 @@ dependencies:
   - notebook>=7.0.0
   - ipykernel
 
-# # jupyter
-#   - jupyter=1.0.0
-#   - jupyterlab=3.5.0
-#   - notebook=6.4.12
-
-# computing stuff
-  - tensorly=0.9.0
-  - torch=2.5.1
-
 # plotting stuff
   - matplotlib=3.10.8
+
+# computing stuff
+  - pip=26.0.1
+  - pip:
+    - torch==2.5.1
+    - tensorly==0.9.0
