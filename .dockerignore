@@ -1,0 +1,16 @@
+# Git metadata
+.git
+.github
+.gitignore
+
+# demos
+demos/
+
+# Python & Jupyter caches
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+
+# macOS / OS metadata
+.DS_Store
+Thumbs.db
