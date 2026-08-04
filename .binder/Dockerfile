@@ -12,5 +12,5 @@ FROM ghcr.io/fgalvarez1/pleural-pressure-modeling-paper-demos:latest
 ARG NB_USER=jovyan
 ARG NB_UID=1000
 USER ${NB_USER}
-ENV HOME /home/${NB_USER}
+ENV HOME=/home/${NB_USER}
 COPY --chown=${NB_UID} . ${HOME}
