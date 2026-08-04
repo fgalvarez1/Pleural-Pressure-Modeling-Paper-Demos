@@ -1,0 +1,43 @@
+############################################################## Book settings ###
+
+title: Welcome to [Álvarez-Barrientos et al. (2026). Pleural Pressure Modeling (Submitted).]'s demos!
+author: Felipe Álvarez-Barrientos, Quentin G. Herszkowicz, Adrien Duwat, Catalin Fetita, Xavier Maître, Dima Rodriguez, Martin Genet
+logo: logo.png
+copyright: "2026"
+only_build_toc_files: true
+
+######################################################### Execution settings ###
+
+execute:
+  execute_notebooks: off
+
+############################################################# Parse settings ###
+
+parse:
+  myst_enable_extensions:
+    - amsmath
+    - dollarmath
+  myst_dmath_double_inline: true # MG20230531: option is ignored, cf. https://github.com/executablebooks/jupyter-book/issues/1738
+    
+############################################################## HTML settings ###
+
+html:
+  use_repository_button: true
+  use_issues_button: false
+
+############################################################# LaTeX settings ###
+
+latex:
+  latex_engine: pdflatex  # pdflatex, xelatex (recommended for unicode), luatex, platex, uplatex
+  use_jupyterbook_latex: true
+
+############################################################# Launch settings ###
+
+repository:
+  url: https://github.com/fgalvarez1/Pleural-Pressure-Modeling-Paper-Demos # MG20230527: Somehow only GitHub works, cf. https://github.com/orgs/executablebooks/discussions/1018
+  path_to_book: .
+  branch: master
+
+launch_buttons:
+  notebook_interface: classic # jupyterlab, classic
+  binderhub_url: https://mybinder.org
