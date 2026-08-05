@@ -4,4 +4,8 @@
 format: jb-book
 root: index
 chapters:
+- file: demos/Fig2a_estimate_pleural_pressure
+- file: demos/Fig2b_compute_transport_plans
+- file: demos/Fig2c_save_transported_fields
+- file: demos/Fig3-9_pleural_pressure_reduced_model
 - file: demos/FigAppB_synthetic_example
