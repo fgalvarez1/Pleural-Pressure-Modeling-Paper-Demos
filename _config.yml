@@ -39,5 +39,5 @@ repository:
   branch: HEAD
 
 launch_buttons:
-  notebook_interface: classic # jupyterlab, classic
+  notebook_interface: jupyterlab # jupyterlab, classic
   binderhub_url: https://mybinder.org
