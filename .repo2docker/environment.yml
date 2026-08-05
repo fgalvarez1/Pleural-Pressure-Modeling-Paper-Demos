@@ -14,22 +14,27 @@ channels:
 
 dependencies:
   # python
-  - python=3.12.12
-  - numpy=2.4.2
+  - python=3.10.15
+  - numpy=1.24.0
+  - matplotlib=3.9.2
+  - scipy=1.14.1
+  - pandas==2.2.3
 
   # modern jupyter interface
   - jupyterlab>=4.0.0
   - notebook>=7.0.0
   - ipykernel
+  - nb_conda_kernels
 
-  # plotting stuff
-  - matplotlib=3.10.8
+  # computing stuff
+  - fenics=2019.1.0
+  - meshio=5.3.5
 
   # pip for additional packages
-  - pip=26.0.1
+  - pip=24.2
   - pip:
     - --extra-index-url https://download.pytorch.org/whl/cpu
-    - torch==2.5.1
-    - torchvision==0.20.1
-    - torchaudio==2.5.1
+    - torch==2.12.0
+    - torchvision==0.27.0
+    - dolfin_mech==2024.7.24
     - tensorly==0.9.0
