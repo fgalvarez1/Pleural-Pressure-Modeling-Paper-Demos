@@ -1,0 +1,5 @@
+.DS_Store
+
+demos/__pycache__/
+demos/Results_*
+demos/TransportPlansPOT
