@@ -17,9 +17,6 @@ rm ~/postBuild
 
 # Add new environments
 conda env create -f .repo2docker/environment_pot.yml
-${CONDA_DIR}/envs/pot/bin/python -m ipykernel install --prefix=${CONDA_DIR} --name pot --display-name "POT"
-
-python -m ipykernel install --prefix=${CONDA_DIR} --name notebook --display-name "Python (Default)"
 
 conda clean --all -f -y
 pip cache purge || true
