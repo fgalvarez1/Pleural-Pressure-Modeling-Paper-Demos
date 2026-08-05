@@ -270,20 +270,19 @@ class FTD:
             # 3. Unconstrained target: U_p_target = M_p @ V^{-1}
             U_p_target = M_p @ torch.linalg.inv(V)
             
-            # 4. Constrained update for C
-            C = torch.linalg.lstsq(Phi, U_p_target).solution
+            # # 4. Constrained update for C
+            # C = torch.linalg.lstsq(Phi, U_p_target).solution
 
-            # # 4. Ridge regression (Tikhonov regularization)
-            # # Create the identity matrix for the penalty
-            # I = torch.eye(Phi.shape[1])
-            # lambda_reg = 0.1  # Your regularization strength (tune this!)
+            # 4. A bit of Tikhonov regularization for numerical stability
+            I = torch.eye(Phi.shape[1])
+            lambda_reg = 1e-6
 
-            # # Compute Ridge Regression explicitly
-            # Phi_T_Phi = Phi.t() @ Phi
-            # Phi_T_U = Phi.t() @ U_p_target
+            # Compute Ridge Regression explicitly
+            Phi_T_Phi = Phi.t() @ Phi
+            Phi_T_U   = Phi.t() @ U_p_target
 
-            # # Solve the regularized system: (Phi^T Phi + lambda*I) * C = Phi^T U
-            # C = torch.linalg.solve(Phi_T_Phi + lambda_reg * I, Phi_T_U)
+            # Solve the regularized system: (Phi^T Phi + lambda*I) * C = Phi^T U
+            C = torch.linalg.solve(Phi_T_Phi + lambda_reg * I, Phi_T_U)
             
             # 5. Rebuild the current U_p for the next phases
             norms = torch.norm(C, p=2, dim=0, keepdim=True)
