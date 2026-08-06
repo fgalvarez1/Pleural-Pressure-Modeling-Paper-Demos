@@ -1,6 +1,10 @@
 on:
   - push
 
+concurrency:
+  group: "pages"
+  cancel-in-progress: false
+
 jobs:
   build_and_deploy_jupyter_book:
     environment:
