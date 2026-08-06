@@ -1,6 +1,6 @@
 import torch
 
-from DesignMatrix_P1 import P1DesignMatrix
+from funtd import P1DesignMatrix
 
 class ResidualSampling:
     def __init__(self, X_observed, U_s, U_t, Phi, C, variables_combo_selected, nodes_dict):

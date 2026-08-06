@@ -1,7 +1,7 @@
 import torch
 import torch.nn.functional as F
 
-from DesignMatrix_P1 import P1DesignMatrix
+from .DesignMatrix_P1 import P1DesignMatrix
 
 class FTD:
     def __init__(self, variables_names, variables_dict, K):
