@@ -51,8 +51,8 @@ cd Pleural-Pressure-Modeling-Paper-Demos
 ```
 3. Create the necessary conda environments (this only needs to be done once):
 ```bash
-conda env create -f repo2docker/environment.yml
-conda env create -f repo2docker/environment_pot.yml
+conda env create -f .repo2docker/environment.yml
+conda env create -f .repo2docker/environment_pot.yml
 ```
 4. Every time you want to run the demos, you need to activate the environment. Note that each demo indicates the environment needed (`notebook` or `pot`):
 ```bash
