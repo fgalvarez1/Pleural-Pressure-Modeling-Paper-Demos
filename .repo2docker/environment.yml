@@ -29,6 +29,13 @@ dependencies:
   # computing stuff
   - fenics=2019.1.0
   - meshio=5.3.5
+  - gmsh=4.13.1
+  - libglu
+  - xorg-libxcursor
+  - xorg-libxft
+  - xorg-libxinerama
+  - xorg-libxrender
+  - xorg-libxxf86vm
 
   # pip for additional packages
   - pip=24.2
