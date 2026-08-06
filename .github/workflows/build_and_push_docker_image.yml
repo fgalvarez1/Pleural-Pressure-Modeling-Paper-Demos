@@ -1,5 +1,8 @@
 on:
-  - push
+  push:
+    paths-ignore:
+      - 'README.md'
+      - '.gitignore'
 
 jobs:
   build_and_push_docker_image:
