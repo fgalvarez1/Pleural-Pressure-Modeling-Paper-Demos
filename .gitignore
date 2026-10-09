@@ -1,0 +1,8 @@
+.DS_Store
+
+demos/__pycache__/
+demos/Results_*
+demos/TransportPlansPOT
+demos/pleural_pressure/__pycache__/
+
+CRF_gb_spiro3d_anonymized.xlsx
