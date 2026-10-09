@@ -15,10 +15,11 @@ channels:
 dependencies:
   # python
   - python=3.10.15
-  - numpy=1.24.0
+  - numpy=1.26.4
   - matplotlib=3.9.2
   - scipy=1.14.1
-  - pandas==2.2.3
+  - pandas=1.5.3
+  - openpyxl
 
   # modern jupyter interface
   - jupyterlab>=4.0.0
@@ -29,7 +30,6 @@ dependencies:
   # computing stuff
   - fenics=2019.1.0
   - meshio=5.3.5
-  - gmsh=4.13.1
   # - libglu
   # - xorg-libxcursor
   # - xorg-libxft
@@ -44,5 +44,6 @@ dependencies:
     # - torch==2.12.0
     # - torchvision==0.27.0
     - dolfin_mech==2026.5.7
+    - gmsh==4.15.2
     - tensorly==0.9.0
     - candelinc-fe==0.1.0
