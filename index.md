@@ -2,6 +2,10 @@
 
 **Reference:** Álvarez-Barrientos et al. (2026). *Physics- and Data-driven reduced-order modeling of spatiotemporal pleural pressure distribution.* (Submitted).
 
+**Code (this repository):** [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.23300468.svg)](https://doi.org/10.5281/zenodo.23300468)
+
+**Data:** [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.21821593.svg)](https://doi.org/10.5281/zenodo.21821593)
+
 Demos can be browsed statically but also interactively—to start a session and run the code just click on the rocket icon at the top of a tutorial page and then click on "Binder", or directly click on [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/fgalvarez1/Pleural-Pressure-Modeling-Paper-Demos/HEAD?urlpath=lab/tree/demos).
 
 
