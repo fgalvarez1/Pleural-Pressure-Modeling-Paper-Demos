@@ -57,6 +57,8 @@ class MeshDisplacementReader:
         V = dolfin.VectorFunctionSpace(mesh, "CG", 1)
         U_exhal_to_inhal = dolfin.Function(V)
 
+        # NOTE The dofs are matched to the mesh vertices through their coordinates, so the result does not depend on the dof ordering.
+        # dolfin.vertex_to_dof_map(V) could be used instead: same mapping, faster, and without relying on exact coordinate equality.
         dof_coords = V.tabulate_dof_coordinates()
         for point_index in range(dof_coords.shape[0]//3):
             dof_index = 3 * point_index
