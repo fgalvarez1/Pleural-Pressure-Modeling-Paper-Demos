@@ -178,7 +178,7 @@ class PleuralPressureMaps:
 
 
                 # phis_test_fn   = dolfin.Function(DG0)
-                phis_estimated_proj = dolfin.project(phis_estimated, fs_DG0)
+                phis_estimated_proj = dolfin.project(phis_estimated, fs_DG0, solver_type="mumps")
                 phis_estimated_proj.rename("phis_estimated", "phis_estimated")
                 phis_proj_lst += [phis_estimated_proj]
 
@@ -249,7 +249,7 @@ class PleuralPressureMaps:
 
         A.ident_zeros()
         nh = dolfin.Function(fs, name=fn_name)
-        dolfin.solve(A, nh.vector(), L)
+        dolfin.solve(A, nh.vector(), L, "mumps")
         return nh
     
 
@@ -262,8 +262,8 @@ class PleuralPressureMaps:
         
         t_fs = dolfin.TensorFunctionSpace(mesh, "DG", 0)
         
-        F_func     = dolfin.project(F_fn, t_fs)
-        sigma_func = dolfin.project(sigma_fn, t_fs)
+        F_func     = dolfin.project(F_fn, t_fs, solver_type="mumps")
+        sigma_func = dolfin.project(sigma_fn, t_fs, solver_type="mumps")
         
         # Reshape to (Num_Cells, 3, 3) for direct matrix algebra
         F_array     = F_func.vector().get_local().reshape((-1, 3, 3))
